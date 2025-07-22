@@ -1,0 +1,17 @@
+agent_model_name: /path/to/your/model/
+tensor_parallel_size: 8
+dtype: auto
+api_key: token-abc123
+tool_call_parser: hermes
+max_model_len: 32768
+nuggets_path: /path/to/nuggets/file/
+qrels_path: /path/to/qrels/file/
+corpus_name: msmarco_v2.1
+index_path: /path/to/bm25/index/
+mapper_path: /path/to/url2doc/mapper/file/
+search_client_type: bm25
+eval_model: gemini-2.5-flash-preview-05-20-nothinking
+log_dir: /path/to/log/
+enable_reasoning: false
+rope_scaling: false
+latex_table: /path/to/result/txt/

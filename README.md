@@ -7,6 +7,7 @@ RAVine (a Reality-Aligned eValuation framework for agentic LLMs with search), is
 
 - 🎯**More Precise**: RAVine provides a more precise and attributable method for nuggets (claim-level ground truth) extraction, the final generated report evaluation is more accurate.
 - ⚙️**More Comprehensive**: RAVine not only focuses on end-to-end result evaluation, but also designs detailed search process performance indicators.
+- 💰**Lower Cost**: RAVine provides local search APIs and reduces the cost of calling LLM-Judge(Gemini-2.5-Flash) to ~0.01$ per evaluation data.
 - 🚀**Full Sandbox**: We have packaged the search tools and evaluation framework. You only need to provide an LLM to run or evaluate the agent search on RAVine.
 
 

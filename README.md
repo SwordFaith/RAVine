@@ -45,3 +45,14 @@ If you need to run multiple configurations at once, we provide the corresponding
 
 ## Citation
 
+If you find RAVine useful in your research, please cite our paper:
+
+```bibtex
+@article{xu2025ravine,
+  title={RAVine: Reality-Aligned Evaluation for Agentic Search},
+  author={Xu, Yilong and Long, Xiang and Zheng, Zhi and Gao, Jinhua},
+  journal={arXiv preprint arXiv:2507.16725},
+  year={2025},
+  url={https://arxiv.org/abs/2507.16725}
+}
+```

@@ -64,7 +64,7 @@ class AgenticMessageHistory:
         pattern = r"<report>(.*?)</report>"
         matches = re.findall(pattern, self._messages[-1]['content'], re.DOTALL)
         if matches:
-            return matches[0]
+            return matches[-1]  # return the last match, avoiding tags in thinking content
         else:
             return None
     

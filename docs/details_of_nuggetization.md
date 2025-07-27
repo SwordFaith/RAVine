@@ -1,0 +1,3 @@
+# Details of nuggetization
+
+Stay tuned...

@@ -39,6 +39,7 @@ bash scripts/evaluation/run.sh your_config_file
 ```
 If you need to run multiple configurations at once, we provide the corresponding scripts. Please write the configurations to be run into `/scripts/evaluation/run_all_eval.sh` and then run it.
 
+For more detailed steps, see [Evaluation_and_reproduction](https://github.com/SwordFaith/RAVine/blob/main/docs/evaluation_and_reproduction.md).
 
 ## Experimental Results
 

@@ -26,7 +26,7 @@ We have uploaded the running evaluation data, nuggets, corpus index, etc. to hug
 First, install the operating environment. This project mainly uses two environments, and we recommend using `uv` to install the following two environments separately:
 - Env for vllm: the vllm version we use is `0.9.0.1`, run `pip install vllm==0.9.0.1`.
 - Env for `/src`: the operating environment of our main program has been exported to `requirements_agent.txt`. Run `uv pip install -r requirements_agent.txt`.
-
+  - The JDK version we use is `21.0.7`, and we recommend that you use this version to support running the BM25 index based on PySerini.
 
 
 Second, write the configuration file, which is related to the selection and setting of the model, operating environment, index, and file path. You can find examples at `configs/` and write your own config here.

@@ -100,8 +100,8 @@ Evaluation results on RAVine, with a maximum context length of 32k and the index
       <td>Qwen2.5-32B-Instruct</td>
       <td style="text-align:center;">71.4</td>
       <td style="text-align:center;">23.0</td>
-      <td style="text-align:center;"><strong>14.9</strong></td>
-      <td style="text-align:center;"><strong>16.5</strong></td>
+      <td style="text-align:center;">14.9</td>
+      <td style="text-align:center;">16.5</td>
       <td style="text-align:center;">40.3</td>
       <td style="text-align:center;">0.03</td>
       <td style="text-align:center;">4.0</td>
@@ -200,6 +200,21 @@ Evaluation results on RAVine, with a maximum context length of 32k and the index
       <td style="text-align:center;">3.4</td>
       <td style="text-align:center;"><strong>0.6</strong></td>
       <td style="text-align:center;"><strong>30.4</strong></td>
+    </tr>
+    <tr>
+      <td>Qwen3-30B-A3B-Instruct-2507</td>
+      <td style="text-align:center;">83.3</td>
+      <td style="text-align:center;">43.1</td>
+      <td style="text-align:center;"><strong>17.8</strong></td>
+      <td style="text-align:center;"><strong>17.5</strong></td>
+      <td style="text-align:center;">15.8</td>
+      <td style="text-align:center;">0.08</td>
+      <td style="text-align:center;">8.6</td>
+      <td style="text-align:center;">17.6</td>
+      <td style="text-align:center;">7.3</td>
+      <td style="text-align:center;">4.5</td>
+      <td style="text-align:center;">15.6</td>
+      <td style="text-align:center;">21.2</td>
     </tr>
     <tr>
       <td>LLaMA-3.1-8B-Instruct</td>
@@ -311,7 +326,7 @@ Evaluation results on RAVine, with a maximum context length of 128k and the inde
     <tr>
       <td>Qwen3-32B (Thinking)</td>
       <td style="text-align:center;"><strong>100.0</strong></td>
-      <td style="text-align:center;"><strong>45.2</strong></td>
+      <td style="text-align:center;">45.2</td>
       <td style="text-align:center;">8.4</td>
       <td style="text-align:center;">9.6</td>
       <td style="text-align:center;">23.0</td>
@@ -369,6 +384,21 @@ Evaluation results on RAVine, with a maximum context length of 128k and the inde
       <td style="text-align:center;">23.1</td>
     </tr>
     <tr>
+      <td>Qwen3-30B-A3B-Instruct-2507</td>
+      <td style="text-align:center;">92.9</td>
+      <td style="text-align:center;"><strong>49.3</strong></td>
+      <td style="text-align:center;"><strong>18.0</strong></td>
+      <td style="text-align:center;"><strong>18.5</strong></td>
+      <td style="text-align:center;">21.0</td>
+      <td style="text-align:center;">0.32</td>
+      <td style="text-align:center;">12.6</td>
+      <td style="text-align:center;">17.8</td>
+      <td style="text-align:center;">7.4</td>
+      <td style="text-align:center;">4.8</td>
+      <td style="text-align:center;">6.1</td>
+      <td style="text-align:center;">19.2</td>
+    </tr>
+    <tr>
       <td>LLaMA-3.1-8B-Instruct</td>
       <td style="text-align:center;">98.8</td>
       <td style="text-align:center;">25.8</td>
@@ -388,7 +418,54 @@ Evaluation results on RAVine, with a maximum context length of 128k and the inde
 
 
 
- Evaluation results on RAVine, with a maximum context length of 32k and the index built by BM25:
+Evaluation results on RAVine, with a maximum context length of 256k and the index built by gte-modernbert-base:
+
+<table>
+  <thead>
+    <tr>
+      <th rowspan="2"></th>
+      <th colspan="4" style="text-align:center;">Report Quality</th>
+      <th colspan="3" style="text-align:center;">Efficiency</th>
+      <th colspan="3" style="text-align:center;">Search</th>
+      <th colspan="2" style="text-align:center;">Fetch</th>
+    </tr>
+    <tr>
+      <th style="text-align:center;">Rate (↑)</th>
+      <th style="text-align:center;">Comp. (↑)</th>
+      <th style="text-align:center;">Rec. (↑)</th>
+      <th style="text-align:center;">Prec. (↑)</th>
+      <th style="text-align:center;">Latency (↓)</th>
+      <th style="text-align:center;">Cost (↓)</th>
+      <th style="text-align:center;">Turns</th>
+      <th style="text-align:center;">Prec. (↑)</th>
+      <th style="text-align:center;">Rec. (↑)</th>
+      <th style="text-align:center;">Gain (↑)</th>
+      <th style="text-align:center;">URL Err. (↓)</th>
+      <th style="text-align:center;">Prec. (↑)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Qwen3-30B-A3B-Instruct-2507</td>
+      <td style="text-align:center;">91.7</td>
+      <td style="text-align:center;">46.8</td>
+      <td style="text-align:center;">18.9</td>
+      <td style="text-align:center;">18.1</td>
+      <td style="text-align:center;">28.8</td>
+      <td style="text-align:center;">0.74</td>
+      <td style="text-align:center;">14.8</td>
+      <td style="text-align:center;">18.5</td>
+      <td style="text-align:center;">7.8</td>
+      <td style="text-align:center;">5.4</td>
+      <td style="text-align:center;">4.5</td>
+      <td style="text-align:center;">17.1</td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+Evaluation results on RAVine, with a maximum context length of 32k and the index built by BM25:
 
 
 <table>
@@ -495,7 +572,7 @@ Evaluation results on RAVine, with a maximum context length of 128k and the inde
       <td>Qwen3-32B</td>
       <td style="text-align:center;">57.1</td>
       <td style="text-align:center;">26.7</td>
-      <td style="text-align:center;"><strong>13.2</strong></td>
+      <td style="text-align:center;">13.2</td>
       <td style="text-align:center;">14.5</td>
       <td style="text-align:center;">10.1</td>
       <td style="text-align:center;">0.09</td>
@@ -537,6 +614,21 @@ Evaluation results on RAVine, with a maximum context length of 128k and the inde
       <td style="text-align:center;">48.9</td>
     </tr>
     <tr>
+      <td>Qwen3-30B-A3B-Instruct-2507</td>
+      <td style="text-align:center;">51.2</td>
+      <td style="text-align:center;">29.1</td>
+      <td style="text-align:center;"><strong>13.9</strong></td>
+      <td style="text-align:center;">16.1</td>
+      <td style="text-align:center;">8.1</td>
+      <td style="text-align:center;">0.06</td>
+      <td style="text-align:center;">6.2</td>
+      <td style="text-align:center;">17.9</td>
+      <td style="text-align:center;">13.3</td>
+      <td style="text-align:center;">5.5</td>
+      <td style="text-align:center;">8.2</td>
+      <td style="text-align:center;">30.0</td>
+    </tr>
+    <tr>
       <td>LLaMA-3.1-8B-Instruct</td>
       <td style="text-align:center;"><strong>97.6</strong></td>
       <td style="text-align:center;">22.1</td>
@@ -556,7 +648,7 @@ Evaluation results on RAVine, with a maximum context length of 128k and the inde
 
 
 
- Evaluation results on RAVine, with a maximum context length of 128k and the index built by BM25:
+Evaluation results on RAVine, with a maximum context length of 128k and the index built by BM25:
 
 
 <table>
@@ -603,8 +695,8 @@ Evaluation results on RAVine, with a maximum context length of 128k and the inde
       <td>Qwen2.5-32B-Instruct</td>
       <td style="text-align:center;">73.8</td>
       <td style="text-align:center;">28.7</td>
-      <td style="text-align:center;"><strong>16.8</strong></td>
-      <td style="text-align:center;"><strong>20.4</strong></td>
+      <td style="text-align:center;">16.8</td>
+      <td style="text-align:center;">20.4</td>
       <td style="text-align:center;">16.8</td>
       <td style="text-align:center;">0.04</td>
       <td style="text-align:center;">3.9</td>
@@ -705,6 +797,21 @@ Evaluation results on RAVine, with a maximum context length of 128k and the inde
       <td style="text-align.center;">27.1</td>
     </tr>
     <tr>
+      <td>Qwen3-30B-A3B-Instruct-2507</td>
+      <td style="text-align:center;">82.1</td>
+      <td style="text-align:center;">43.5</td>
+      <td style="text-align:center;"><strong>19.8</strong></td>
+      <td style="text-align:center;"><strong>21.2</strong></td>
+      <td style="text-align:center;">33.2</td>
+      <td style="text-align:center;">1.02</td>
+      <td style="text-align:center;">26.3</td>
+      <td style="text-align:center;">19.6</td>
+      <td style="text-align:center;"><strong>15.6</strong></td>
+      <td style="text-align:center;">7.1</td>
+      <td style="text-align:center;">80.0</td>
+      <td style="text-align:center;">8.0</td>
+    </tr>
+    <tr>
       <td>LLaMA-3.1-8B-Instruct</td>
       <td style="text-align:center;">97.6</td>
       <td style="text-align:center;">23.4</td>
@@ -722,6 +829,52 @@ Evaluation results on RAVine, with a maximum context length of 128k and the inde
   </tbody>
 </table>
 
+
+
+Evaluation results on RAVine, with a maximum context length of 256k and the index built by BM25:
+
+<table>
+  <thead>
+    <tr>
+      <th rowspan="2"></th>
+      <th colspan="4" style="text-align:center;">Report Quality</th>
+      <th colspan="3" style="text-align:center;">Efficiency</th>
+      <th colspan="3" style="text-align:center;">Search</th>
+      <th colspan="2" style="text-align:center;">Fetch</th>
+    </tr>
+    <tr>
+      <th style="text-align:center;">Rate (↑)</th>
+      <th style="text-align:center;">Comp. (↑)</th>
+      <th style="text-align:center;">Rec. (↑)</th>
+      <th style="text-align:center;">Prec. (↑)</th>
+      <th style="text-align:center;">Latency (↓)</th>
+      <th style="text-align:center;">Cost (↓)</th>
+      <th style="text-align:center;">Turns</th>
+      <th style="text-align:center;">Prec. (↑)</th>
+      <th style="text-align:center;">Rec. (↑)</th>
+      <th style="text-align:center;">Gain (↑)</th>
+      <th style="text-align:center;">URL Err. (↓)</th>
+      <th style="text-align:center;">Prec. (↑)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Qwen3-30B-A3B-Instruct-2507</td>
+      <td style="text-align:center;">81.0</td>
+      <td style="text-align:center;">42.0</td>
+      <td style="text-align:center;">22.7</td>
+      <td style="text-align:center;">22.0</td>
+      <td style="text-align:center;">51.5</td>
+      <td style="text-align:center;">2.39</td>
+      <td style="text-align:center;">38.5</td>
+      <td style="text-align:center;">20.0</td>
+      <td style="text-align:center;">12.4</td>
+      <td style="text-align:center;">5.9</td>
+      <td style="text-align:center;">74.6</td>
+      <td style="text-align:center;">4.3</td>
+    </tr>
+  </tbody>
+</table>
 
 
 ## Citation

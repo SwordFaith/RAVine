@@ -1,0 +1,79 @@
+# syntax=docker/dockerfile:1.4
+
+# Choose base image based on requirements.txt: torch==2.7.0, nvidia-*-cu12 -> CUDA 12.6
+FROM pytorch/pytorch:2.7.0-cuda12.6-cudnn9-devel
+
+# Set CUDA_HOME to match the base image
+ENV CUDA_HOME=/usr/local/cuda-12.6
+
+# Install system dependencies: git for cloning, openjdk-21 for pyserini
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends \
+    git \
+    openjdk-21-jdk-headless && \
+    rm -rf /var/lib/apt/lists/*
+
+# Configure Java environment for pyserini/pyjnius
+ENV JAVA_HOME=/usr/lib/jvm/java-21-openjdk-amd64
+ENV PATH="${JAVA_HOME}/bin:${PATH}"
+ENV JVM_PATH="/usr/lib/jvm/java-21-openjdk-amd64/lib/server/libjvm.so"
+
+WORKDIR /app
+
+# Clone the repository
+RUN git clone https://github.com/SwordFaith/RAVine.git .
+
+# Fix problematic dependencies and script lines for a self-contained environment.
+# - The specified xformers version is not on PyPI; let pip resolve a compatible version.
+# - faiss-gpu is no longer on PyPI and not needed for the log evaluation demo.
+# - The run script contains placeholder paths for JAVA_HOME which would cause errors.
+RUN sed -i \
+    -e 's/^xformers==.*/xformers/' \
+    -e '/^faiss-cpu/d' \
+    -e '/^faiss-gpu/d' \
+    requirements_agent.txt && \
+    sed -i \
+    -e '/^export JAVA_HOME/d' \
+    -e '/^export CLASSPATH/d' \
+    -e '/^export PATH/d' \
+    -e '/^export JVM_PATH/d' \
+    scripts/evaluation/run_log.sh
+
+# Install Python dependencies from the modified requirements file
+RUN pip install --no-cache-dir -r requirements_agent.txt
+
+# Download NLTK data required for tokenization
+RUN python -m nltk.downloader punkt
+
+# Download datasets and logs from Hugging Face
+# Using || true to allow building without a token, as the datasets are public.
+RUN --mount=type=secret,id=hf_token \
+    if [ -f /run/secrets/hf_token ]; then huggingface-cli login --token "$(cat /run/secrets/hf_token)"; fi && \
+    huggingface-cli download sapphirex/RAVine-nuggets --repo-type dataset --local-dir /data/RAVine-nuggets && \
+    huggingface-cli download sapphirex/RAVine-qrels --repo-type dataset --local-dir /data/RAVine-qrels && \
+    huggingface-cli download sapphirex/RAVine-mapper --repo-type dataset --local-dir /data/RAVine-mapper && \
+    huggingface-cli download sapphirex/RAVine-logs --repo-type dataset --local-dir /data/RAVine-logs
+
+# Create the configuration file for the log evaluation script
+COPY <<'CONFIG' /app/config.yaml
+nuggets_path: "/data/RAVine-nuggets/rag24.test.final.nuggets.jsonl"
+qrels_path: "/data/RAVine-qrels/qrels.jsonl"
+agent_model_name: "meta-llama/Llama-3.1-8B-Instruct"
+corpus_name: "msmarco-v2.1-doc"
+mapper_path: "/data/RAVine-mapper/url2doc.msmarco-v2.1-doc.json"
+eval_model: "gemini-2.5-flash-preview-05-20-nothinking"
+log_dir: "/data/RAVine-logs/meta-llama/Llama-3.1-8B-Instruct"
+enable_thinking: true
+CONFIG
+
+# Create the entrypoint script
+COPY --chmod=755 <<'BASH' /app/entrypoint.sh
+#!/usr/bin/env bash
+set -euo pipefail
+
+# Run the evaluation from logs, which is self-contained and doesn't require a live LLM server.
+# The script reads the config file and sets up the command-line arguments.
+bash scripts/evaluation/run_log.sh /app/config.yaml
+BASH
+
+ENTRYPOINT ["/app/entrypoint.sh"]

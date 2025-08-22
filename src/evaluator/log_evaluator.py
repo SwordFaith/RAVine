@@ -435,11 +435,11 @@ class LogEvaluator:
         mm.num_valid_run = len(self.topics) - mm.num_failed_runs # `valid` means that the final report is generated correctly
         mm.task_finish_rate = mm.num_valid_run / mm.num_run
 
-        mm.avg_task_completeness /= mm.num_valid_run
+        mm.avg_task_completeness /= mm.num_valid_run if mm.num_valid_run > 0 else 0.0
         mm.final_task_completeness = mm.avg_task_completeness * mm.task_finish_rate # consider failed runs in calculation
-        mm.avg_citation_recall /= mm.num_valid_run
-        mm.avg_citation_precision /= mm.num_valid_run
-        mm.avg_internal_knowledge_completeness /= mm.num_valid_run
+        mm.avg_citation_recall /= mm.num_valid_run if mm.num_valid_run > 0 else 0.0
+        mm.avg_citation_precision /= mm.num_valid_run if mm.num_valid_run > 0 else 0.0
+        mm.avg_internal_knowledge_completeness /= mm.num_valid_run if mm.num_valid_run > 0 else 0.0
 
         mm.avg_latency /= mm.num_run
         mm.avg_cost /= mm.num_run
@@ -449,14 +449,14 @@ class LogEvaluator:
         mm.avg_tool_choice_error /= mm.num_run
         mm.avg_num_search_call /= mm.num_run
         mm.avg_num_fetch_call /= mm.num_run
-        mm.micro_avg_tool_name_error /= mm.total_num_tool_call
+        mm.micro_avg_tool_name_error /= mm.total_num_tool_call if mm.total_num_tool_call > 0 else 0.0
         mm.macro_avg_tool_name_error /= mm.num_run
 
         mm.macro_avg_search_precision /= mm.num_run
-        mm.micro_avg_fetch_precision /= mm.total_num_fetch_call
+        mm.micro_avg_fetch_precision /= mm.total_num_fetch_call if mm.total_num_fetch_call > 0 else 0.0
         mm.macro_avg_fetch_precision /= mm.num_run
         mm.macro_avg_raw_search_precision /= mm.num_run
-        mm.micro_avg_raw_fetch_precision /= mm.total_num_fetch_call
+        mm.micro_avg_raw_fetch_precision /= mm.total_num_fetch_call if mm.total_num_fetch_call > 0 else 0.0
         mm.macro_avg_raw_fetch_precision /= mm.num_run
 
         mm.macro_avg_search_recall /= mm.num_run
@@ -465,16 +465,16 @@ class LogEvaluator:
         mm.avg_avg_search_gain /= mm.num_run
         mm.avg_avg_raw_search_gain /= mm.num_run
 
-        mm.micro_avg_num_correct_search_call /= mm.total_num_search_call
-        mm.micro_avg_num_correct_fetch_call /= mm.total_num_fetch_call
+        mm.micro_avg_num_correct_search_call /= mm.total_num_search_call if mm.total_num_search_call > 0 else 0.0
+        mm.micro_avg_num_correct_fetch_call /= mm.total_num_fetch_call if mm.total_num_fetch_call > 0 else 0.0
         mm.macro_avg_num_correct_search_call /= mm.num_run
         mm.macro_avg_num_correct_fetch_call /= mm.num_run
 
-        mm.micro_avg_search_params_error /= mm.total_num_search_call
-        mm.micro_avg_search_extra_params_error /= mm.total_num_search_call
-        mm.micro_avg_fetch_params_error /= mm.total_num_fetch_call
-        mm.micro_avg_fetch_extra_params_error /= mm.total_num_fetch_call
-        mm.micro_avg_fetch_url_error /= mm.total_num_fetch_call
+        mm.micro_avg_search_params_error /= mm.total_num_search_call if mm.total_num_search_call > 0 else 0.0
+        mm.micro_avg_search_extra_params_error /= mm.total_num_search_call if mm.total_num_search_call > 0 else 0.0
+        mm.micro_avg_fetch_params_error /= mm.total_num_fetch_call if mm.total_num_fetch_call > 0 else 0.0
+        mm.micro_avg_fetch_extra_params_error /= mm.total_num_fetch_call if mm.total_num_fetch_call > 0 else 0.0
+        mm.micro_avg_fetch_url_error /= mm.total_num_fetch_call if mm.total_num_fetch_call > 0 else 0.0
 
         mm.macro_avg_search_params_error /= mm.num_run
         mm.macro_avg_search_extra_params_error /= mm.num_run

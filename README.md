@@ -112,6 +112,36 @@ Evaluation results on RAVine, with a maximum context length of 32k and the index
       <td style="text-align:center;">28.7</td>
     </tr>
     <tr>
+      <td>Qwen3-4B (Thinking)</td>
+      <td style="text-align:center;">92.9</td>
+      <td style="text-align:center;">35.4</td>
+      <td style="text-align:center;">14.2</td>
+      <td style="text-align:center;">11.6</td>
+      <td style="text-align:center;">10.2</td>
+      <td style="text-align:center;">0.01</td>
+      <td style="text-align:center;">2.3</td>
+      <td style="text-align:center;">20.9</td>
+      <td style="text-align:center;">6.4</td>
+      <td style="text-align:center;">5.6</td>
+      <td style="text-align:center;"><strong>0.0</strong></td>
+      <td style="text-align:center;">16.7</td>
+    </tr>
+    <tr>
+      <td>Qwen3-4B</td>
+      <td style="text-align:center;">0.0</td>
+      <td style="text-align:center;">0.0</td>
+      <td style="text-align:center;">0.0</td>
+      <td style="text-align:center;">0.0</td>
+      <td style="text-align:center;">10.1</td>
+      <td style="text-align:center;">0.04</td>
+      <td style="text-align:center;">6.2</td>
+      <td style="text-align:center;">21.3</td>
+      <td style="text-align:center;">6.0</td>
+      <td style="text-align:center;">4.7</td>
+      <td style="text-align:center;">1.3</td>
+      <td style="text-align:center;">28.3</td>
+    </tr>
+    <tr>
       <td>Qwen3-8B (Thinking)</td>
       <td style="text-align:center;">86.9</td>
       <td style="text-align:center;">37.8</td>
@@ -144,7 +174,7 @@ Evaluation results on RAVine, with a maximum context length of 32k and the index
     <tr>
       <td>Qwen3-32B (Thinking)</td>
       <td style="text-align:center;"><strong>98.8</strong></td>
-      <td style="text-align:center;"><strong>43.5</strong></td>
+      <td style="text-align:center;">43.5</td>
       <td style="text-align:center;">11.7</td>
       <td style="text-align:center;">15.1</td>
       <td style="text-align:center;">19.6</td>
@@ -198,15 +228,45 @@ Evaluation results on RAVine, with a maximum context length of 32k and the index
       <td style="text-align:center;">16.8</td>
       <td style="text-align:center;">6.2</td>
       <td style="text-align:center;">3.4</td>
-      <td style="text-align:center;"><strong>0.6</strong></td>
-      <td style="text-align:center;"><strong>30.4</strong></td>
+      <td style="text-align:center;">0.6</td>
+      <td style="text-align:center;">30.4</td>
+    </tr>
+    <tr>
+      <td>Qwen3-4B-Instruct-2507</td>
+      <td style="text-align:center;">95.2</td>
+      <td style="text-align:center;">39.4</td>
+      <td style="text-align:center;">7.6</td>
+      <td style="text-align:center;">7.0</td>
+      <td style="text-align:center;">8.3</td>
+      <td style="text-align:center;">0.02</td>
+      <td style="text-align:center;">5.9</td>
+      <td style="text-align:center;">17.5</td>
+      <td style="text-align:center;">6.5</td>
+      <td style="text-align:center;">3.8</td>
+      <td style="text-align:center;">13.8</td>
+      <td style="text-align:center;">27.6</td>
+    </tr>
+    <tr>
+      <td>Qwen3-4B-Thinking-2507</td>
+      <td style="text-align:center;"><strong>98.8</strong></td>
+      <td style="text-align:center;">36.6</td>
+      <td style="text-align:center;">12.1</td>
+      <td style="text-align:center;">15.4</td>
+      <td style="text-align:center;">23.0</td>
+      <td style="text-align:center;">0.02</td>
+      <td style="text-align:center;">2.1</td>
+      <td style="text-align:center;">17.8</td>
+      <td style="text-align:center;">5.5</td>
+      <td style="text-align:center;">4.4</td>
+      <td style="text-align:center;"><strong>0.0</strong></td>
+      <td style="text-align:center;"><strong>40.0</strong></td>
     </tr>
     <tr>
       <td>Qwen3-30B-A3B-Instruct-2507</td>
       <td style="text-align:center;">83.3</td>
       <td style="text-align:center;">43.1</td>
       <td style="text-align:center;"><strong>17.8</strong></td>
-      <td style="text-align:center;"><strong>17.5</strong></td>
+      <td style="text-align:center;">17.5</td>
       <td style="text-align:center;">15.8</td>
       <td style="text-align:center;">0.08</td>
       <td style="text-align:center;">8.6</td>
@@ -215,6 +275,21 @@ Evaluation results on RAVine, with a maximum context length of 32k and the index
       <td style="text-align:center;">4.5</td>
       <td style="text-align:center;">15.6</td>
       <td style="text-align:center;">21.2</td>
+    </tr>
+    <tr>
+      <td>Qwen3-30B-A3B-Thinking-2507</td>
+      <td style="text-align:center;">96.4</td>
+      <td style="text-align:center;"><strong>44.1</strong></td>
+      <td style="text-align:center;">15.6</td>
+      <td style="text-align:center;"><strong>19.0</strong></td>
+      <td style="text-align:center;">29.7</td>
+      <td style="text-align:center;">0.02</td>
+      <td style="text-align:center;">3.5</td>
+      <td style="text-align:center;">18.1</td>
+      <td style="text-align:center;">4.2</td>
+      <td style="text-align:center;">3.5</td>
+      <td style="text-align:center;"><strong>0.0</strong></td>
+      <td style="text-align:center;">31.5</td>
     </tr>
     <tr>
       <td>LLaMA-3.1-8B-Instruct</td>
@@ -276,7 +351,7 @@ Evaluation results on RAVine, with a maximum context length of 128k and the inde
       <td style="text-align:center;">2.6</td>
       <td style="text-align:center;">2.3</td>
       <td style="text-align:center;"><strong>0.0</strong></td>
-      <td style="text-align:center;"><strong>33.3</strong></td>
+      <td style="text-align:center;">33.3</td>
     </tr>
     <tr>
       <td>Qwen2.5-32B-Instruct</td>
@@ -287,11 +362,41 @@ Evaluation results on RAVine, with a maximum context length of 128k and the inde
       <td style="text-align:center;">17.9</td>
       <td style="text-align:center;">0.03</td>
       <td style="text-align:center;">3.8</td>
-      <td style="text-align:center;"><strong>19.7</strong></td>
+      <td style="text-align:center;">19.7</td>
       <td style="text-align:center;">6.0</td>
       <td style="text-align:center;">4.3</td>
       <td style="text-align:center;">3.6</td>
       <td style="text-align:center;">28.3</td>
+    </tr>
+    <tr>
+      <td>Qwen3-4B (Thinking)</td>
+      <td style="text-align:center;">91.7</td> 
+      <td style="text-align:center;">37.3</td> 
+      <td style="text-align:center;">8.2</td> 
+      <td style="text-align:center;">10.0</td> 
+      <td style="text-align:center;">12.8</td> 
+      <td style="text-align:center;">0.02</td> 
+      <td style="text-align:center;">3.0</td> 
+      <td style="text-align:center;">19.4</td> 
+      <td style="text-align:center;">5.8</td> 
+      <td style="text-align:center;">4.0</td> 
+      <td style="text-align:center;">1.8</td> 
+      <td style="text-align:center;">25.5</td> 
+    </tr>
+    <tr>
+      <td>Qwen3-4B</td>
+      <td style="text-align:center;">0.0</td> 
+      <td style="text-align:center;">0.0</td> 
+      <td style="text-align:center;">0.0</td> 
+      <td style="text-align:center;">0.0</td> 
+      <td style="text-align:center;">15.8</td> 
+      <td style="text-align:center;">0.09</td> 
+      <td style="text-align:center;">12.4</td> 
+      <td style="text-align:center;">13.8</td> 
+      <td style="text-align:center;">5.8</td> 
+      <td style="text-align:center;">2.9</td> 
+      <td style="text-align:center;">6.7</td> 
+      <td style="text-align:center;">15.2</td> 
     </tr>
     <tr>
       <td>Qwen3-8B (Thinking)</td>
@@ -342,7 +447,7 @@ Evaluation results on RAVine, with a maximum context length of 128k and the inde
       <td>Qwen3-32B</td>
       <td style="text-align:center;">82.1</td>
       <td style="text-align:center;">35.0</td>
-      <td style="text-align:center;"><strong>13.2</strong></td>
+      <td style="text-align:center;">13.2</td>
       <td style="text-align:center;">11.9</td>
       <td style="text-align:center;">22.7</td>
       <td style="text-align:center;">0.42</td>
@@ -384,11 +489,41 @@ Evaluation results on RAVine, with a maximum context length of 128k and the inde
       <td style="text-align:center;">23.1</td>
     </tr>
     <tr>
+      <td>Qwen3-4B-Instruct-2507</td>
+      <td style="text-align:center;">96.4</td> 
+      <td style="text-align:center;">39.7</td> 
+      <td style="text-align:center;">5.8</td> 
+      <td style="text-align:center;">4.4</td> 
+      <td style="text-align:center;">7.8</td> 
+      <td style="text-align:center;">0.02</td> 
+      <td style="text-align:center;">5.9</td> 
+      <td style="text-align:center;">18.3</td> 
+      <td style="text-align:center;">6.6</td> 
+      <td style="text-align:center;">4.0</td> 
+      <td style="text-align:center;">10.1</td> 
+      <td style="text-align:center;">31.0</td> 
+    </tr>
+    <tr>
+      <td>Qwen3-4B-Thinking-2507</td>
+      <td style="text-align:center;">97.6</td> 
+      <td style="text-align:center;">35.0</td> 
+      <td style="text-align:center;">10.4</td> 
+      <td style="text-align:center;">13.3</td> 
+      <td style="text-align:center;">22.6</td> 
+      <td style="text-align:center;">0.01</td> 
+      <td style="text-align:center;">2.1</td> 
+      <td style="text-align:center;">19.6</td> 
+      <td style="text-align:center;">5.9</td> 
+      <td style="text-align:center;">4.9</td> 
+      <td style="text-align:center;"><strong>0.0</strong></td> 
+      <td style="text-align:center;">25.0</td> 
+    </tr>
+    <tr>
       <td>Qwen3-30B-A3B-Instruct-2507</td>
       <td style="text-align:center;">92.9</td>
       <td style="text-align:center;"><strong>49.3</strong></td>
       <td style="text-align:center;"><strong>18.0</strong></td>
-      <td style="text-align:center;"><strong>18.5</strong></td>
+      <td style="text-align:center;">18.5</td>
       <td style="text-align:center;">21.0</td>
       <td style="text-align:center;">0.32</td>
       <td style="text-align:center;">12.6</td>
@@ -397,6 +532,21 @@ Evaluation results on RAVine, with a maximum context length of 128k and the inde
       <td style="text-align:center;">4.8</td>
       <td style="text-align:center;">6.1</td>
       <td style="text-align:center;">19.2</td>
+    </tr>
+    <tr>
+      <td>Qwen3-30B-A3B-Thinking-2507</td>
+      <td style="text-align:center;"><strong>100.0</strong></td> 
+      <td style="text-align:center;">46.5</td> 
+      <td style="text-align:center;">15.9</td> 
+      <td style="text-align:center;"><strong>20.1</strong></td> 
+      <td style="text-align:center;">31.7</td> 
+      <td style="text-align:center;">0.02</td> 
+      <td style="text-align:center;">3.4</td> 
+      <td style="text-align:center;"><strong>19.9</strong></td> 
+      <td style="text-align:center;">4.6</td> 
+      <td style="text-align:center;">3.9</td> 
+      <td style="text-align:center;"><strong>0.0</strong></td> 
+      <td style="text-align:center;"><strong>39.6</strong></td> 
     </tr>
     <tr>
       <td>LLaMA-3.1-8B-Instruct</td>
@@ -446,19 +596,64 @@ Evaluation results on RAVine, with a maximum context length of 256k and the inde
   </thead>
   <tbody>
     <tr>
+      <td>Qwen3-4B-Instruct-2507</td>
+      <td style="text-align:center;">97.6</td> 
+      <td style="text-align:center;">41.3</td> 
+      <td style="text-align:center;">6.7</td> 
+      <td style="text-align:center;">7.6</td> 
+      <td style="text-align:center;">7.6</td> 
+      <td style="text-align:center;">0.02</td> 
+      <td style="text-align:center;">6.0</td> 
+      <td style="text-align:center;">17.3</td> 
+      <td style="text-align:center;">6.7</td> 
+      <td style="text-align:center;">3.9</td> 
+      <td style="text-align:center;">17.1</td> 
+      <td style="text-align:center;">28.5</td> 
+    </tr>
+    <tr>
+      <td>Qwen3-4B-Thinking-2507</td>
+      <td style="text-align:center;"><strong>100.0</strong></td> 
+      <td style="text-align:center;">34.1</td> 
+      <td style="text-align:center;">15.6</td> 
+      <td style="text-align:center;">16.5</td> 
+      <td style="text-align:center;">20.5</td> 
+      <td style="text-align:center;">0.02</td> 
+      <td style="text-align:center;">2.1</td> 
+      <td style="text-align:center;">17.8</td> 
+      <td style="text-align:center;">5.6</td> 
+      <td style="text-align:center;">4.6</td> 
+      <td style="text-align:center;"><strong>0.0</strong></td> 
+      <td style="text-align:center;">0.0</td>
+    </tr>
+    <tr>
       <td>Qwen3-30B-A3B-Instruct-2507</td>
       <td style="text-align:center;">91.7</td>
-      <td style="text-align:center;">46.8</td>
-      <td style="text-align:center;">18.9</td>
-      <td style="text-align:center;">18.1</td>
+      <td style="text-align:center;"><strong>46.8</strong></td>
+      <td style="text-align:center;"><strong>18.9</strong></td>
+      <td style="text-align:center;"><strong>18.1</strong></td>
       <td style="text-align:center;">28.8</td>
       <td style="text-align:center;">0.74</td>
       <td style="text-align:center;">14.8</td>
       <td style="text-align:center;">18.5</td>
-      <td style="text-align:center;">7.8</td>
-      <td style="text-align:center;">5.4</td>
+      <td style="text-align:center;"><strong>7.8</strong></td>
+      <td style="text-align:center;"><strong>5.4</strong></td>
       <td style="text-align:center;">4.5</td>
       <td style="text-align:center;">17.1</td>
+    </tr>
+    <tr>
+      <td>Qwen3-30B-A3B-Thinking-2507</td>
+      <td style="text-align:center;"><strong>100.0</strong></td> 
+      <td style="text-align:center;">46.2</td> 
+      <td style="text-align:center;">14.6</td> 
+      <td style="text-align:center;">17.5</td> 
+      <td style="text-align:center;">29.4</td> 
+      <td style="text-align:center;">0.02</td> 
+      <td style="text-align:center;">3.3</td> 
+      <td style="text-align:center;"><strong>19.6</strong></td> 
+      <td style="text-align:center;">4.8</td> 
+      <td style="text-align:center;">4.1</td> 
+      <td style="text-align:center;"><strong>0.0</strong></td> 
+      <td style="text-align:center;"><strong>33.7</strong></td> 
     </tr>
   </tbody>
 </table>
@@ -517,11 +712,41 @@ Evaluation results on RAVine, with a maximum context length of 32k and the index
       <td style="text-align:center;">16.6</td>
       <td style="text-align:center;">0.04</td>
       <td style="text-align:center;">3.9</td>
-      <td style="text-align:center;"><strong>24.7</strong></td>
+      <td style="text-align:center;">24.7</td>
       <td style="text-align:center;">12.9</td>
       <td style="text-align:center;">6.9</td>
       <td style="text-align:center;">5.1</td>
-      <td style="text-align:center;"><strong>49.5</strong></td>
+      <td style="text-align:center;">49.5</td>
+    </tr>
+    <tr>
+      <td>Qwen3-4B (Thinking)</td>
+      <td style="text-align:center;">85.7</td> 
+      <td style="text-align:center;">31.9</td> 
+      <td style="text-align:center;"><strong>18.7</strong></td> 
+      <td style="text-align:center;">14.2</td> 
+      <td style="text-align:center;">8.3</td> 
+      <td style="text-align:center;">0.02</td> 
+      <td style="text-align:center;">3.0</td> 
+      <td style="text-align:center;">23.5</td> 
+      <td style="text-align:center;">10.7</td> 
+      <td style="text-align:center;">6.1</td> 
+      <td style="text-align:center;"><strong>0.0</strong></td> 
+      <td style="text-align:center;">15.0</td>
+    </tr>
+    <tr>
+      <td>Qwen3-4B</td>
+      <td style="text-align:center;">0.0</td> 
+      <td style="text-align:center;">0.0</td> 
+      <td style="text-align:center;">0.0</td> 
+      <td style="text-align:center;">0.0</td> 
+      <td style="text-align:center;">4.8</td> 
+      <td style="text-align:center;">0.04</td> 
+      <td style="text-align:center;">5.1</td> 
+      <td style="text-align:center;">21.8</td> 
+      <td style="text-align:center;">8.0</td> 
+      <td style="text-align:center;">4.8</td> 
+      <td style="text-align:center;"><strong>0.0</strong></td> 
+      <td style="text-align:center;">39.3</td> 
     </tr>
     <tr>
       <td>Qwen3-8B (Thinking)</td>
@@ -556,7 +781,7 @@ Evaluation results on RAVine, with a maximum context length of 32k and the index
     <tr>
       <td>Qwen3-32B (Thinking)</td>
       <td style="text-align:center;">91.7</td>
-      <td style="text-align:center;"><strong>40.9</strong></td>
+      <td style="text-align:center;">40.9</td>
       <td style="text-align:center;">10.2</td>
       <td style="text-align:center;">12.5</td>
       <td style="text-align:center;">20.6</td>
@@ -588,7 +813,7 @@ Evaluation results on RAVine, with a maximum context length of 32k and the index
       <td style="text-align:center;">76.2</td>
       <td style="text-align:center;">32.6</td>
       <td style="text-align:center;">12.6</td>
-      <td style="text-align:center;"><strong>18.5</strong></td>
+      <td style="text-align:center;">18.5</td>
       <td style="text-align:center;">23.3</td>
       <td style="text-align:center;">0.09</td>
       <td style="text-align:center;">6.0</td>
@@ -614,10 +839,40 @@ Evaluation results on RAVine, with a maximum context length of 32k and the index
       <td style="text-align:center;">48.9</td>
     </tr>
     <tr>
+      <td>Qwen3-4B-Instruct-2507</td>
+      <td style="text-align:center;">82.1</td> 
+      <td style="text-align:center;">34.0</td> 
+      <td style="text-align:center;">9.4</td> 
+      <td style="text-align:center;">9.7</td> 
+      <td style="text-align:center;">6.0</td> 
+      <td style="text-align:center;">0.03</td> 
+      <td style="text-align:center;">5.9</td> 
+      <td style="text-align:center;">20.9</td> 
+      <td style="text-align:center;">12.4</td> 
+      <td style="text-align:center;">4.9</td> 
+      <td style="text-align:center;">20.4</td> 
+      <td style="text-align:center;">30.7</td> 
+    </tr>
+    <tr>
+      <td>Qwen3-4B-Thinking-2507</td>
+      <td style="text-align:center;"><strong>100.0</strong></td> 
+      <td style="text-align:center;">34.5</td> 
+      <td style="text-align:center;">13.8</td> 
+      <td style="text-align:center;">16.8</td> 
+      <td style="text-align:center;">17.6</td> 
+      <td style="text-align:center;">0.01</td> 
+      <td style="text-align:center;">2.2</td> 
+      <td style="text-align:center;">24.7</td> 
+      <td style="text-align:center;">8.4</td> 
+      <td style="text-align:center;">5.5</td> 
+      <td style="text-align:center;">20.0</td> 
+      <td style="text-align:center;"><strong>60.0</strong></td> 
+    </tr>
+    <tr>
       <td>Qwen3-30B-A3B-Instruct-2507</td>
       <td style="text-align:center;">51.2</td>
       <td style="text-align:center;">29.1</td>
-      <td style="text-align:center;"><strong>13.9</strong></td>
+      <td style="text-align:center;">13.9</td>
       <td style="text-align:center;">16.1</td>
       <td style="text-align:center;">8.1</td>
       <td style="text-align:center;">0.06</td>
@@ -629,8 +884,23 @@ Evaluation results on RAVine, with a maximum context length of 32k and the index
       <td style="text-align:center;">30.0</td>
     </tr>
     <tr>
+      <td>Qwen3-30B-A3B-Thinking-2507</td>
+      <td style="text-align:center;">97.6</td> 
+      <td style="text-align:center;"><strong>45.8</strong></td> 
+      <td style="text-align:center;">17.2</td> 
+      <td style="text-align:center;"><strong>22.9</strong></td> 
+      <td style="text-align:center;">27.0</td> 
+      <td style="text-align:center;">0.02</td> 
+      <td style="text-align:center;">3.0</td> 
+      <td style="text-align:center;"><strong>25.1</strong></td> 
+      <td style="text-align:center;">9.3</td> 
+      <td style="text-align:center;">6.4</td> 
+      <td style="text-align:center;"><strong>0.0</strong></td> 
+      <td style="text-align:center;">46.0</td> 
+    </tr>
+    <tr>
       <td>LLaMA-3.1-8B-Instruct</td>
-      <td style="text-align:center;"><strong>97.6</strong></td>
+      <td style="text-align:center;">97.6</td>
       <td style="text-align:center;">22.1</td>
       <td style="text-align:center;">3.0</td>
       <td style="text-align:center;">2.5</td>
@@ -704,7 +974,37 @@ Evaluation results on RAVine, with a maximum context length of 128k and the inde
       <td style="text-align:center;">15.1</td>
       <td style="text-align:center;">7.5</td>
       <td style="text-align:center;">5.3</td>
-      <td style="text-align:center;"><strong>43.0</strong></td>
+      <td style="text-align:center;">43.0</td>
+    </tr>
+    <tr>
+      <td>Qwen3-4B (Thinking)</td>
+        <td style="text-align:center;">82.1</td>
+        <td style="text-align:center;">31.4</td>
+        <td style="text-align:center;">14.3</td>
+        <td style="text-align:center;">16.4</td>
+        <td style="text-align:center;">12.6</td>
+        <td style="text-align:center;">0.02</td>
+        <td style="text-align:center;">3.4</td>
+        <td style="text-align:center;">22.9</td>
+        <td style="text-align:center;">9.6</td>
+        <td style="text-align:center;">5.4</td>
+        <td style="text-align:center;">8.9</td>
+        <td style="text-align:center;">19.0</td>
+    </tr>
+    <tr>
+      <td>Qwen3-4B</td>
+      <td style="text-align:center;">0.0</td>
+      <td style="text-align:center;">0.0</td>
+      <td style="text-align:center;">0.0</td>
+      <td style="text-align:center;">0.0</td>
+      <td style="text-align:center;">12.2</td>
+      <td style="text-align:center;">0.09</td>
+      <td style="text-align:center;">9.3</td>
+      <td style="text-align:center;">18.1</td>
+      <td style="text-align:center;">8.7</td>
+      <td style="text-align:center;">4.1</td>
+      <td style="text-align:center;">6.2</td>
+      <td style="text-align:center;">26.2</td>
     </tr>
     <tr>
       <td>Qwen3-8B (Thinking)</td>
@@ -778,7 +1078,7 @@ Evaluation results on RAVine, with a maximum context length of 128k and the inde
       <td style="text-align:center;">18.7</td>
       <td style="text-align:center;">13.5</td>
       <td style="text-align:center;">5.3</td>
-      <td style="text-align:center;"><strong>3.3</strong></td>
+      <td style="text-align:center;">3.3</td>
       <td style="text-align:center;">29.6</td>
     </tr>
     <tr>
@@ -794,14 +1094,44 @@ Evaluation results on RAVine, with a maximum context length of 128k and the inde
       <td style="text-align:center;">10.0</td>
       <td style="text-align:center;">4.7</td>
       <td style="text-align:center;">6.5</td>
-      <td style="text-align.center;">27.1</td>
+      <td style="text-align:center;">27.1</td>
+    </tr>
+    <tr>
+      <td>Qwen3-4B-Instruct-2507</td>
+      <td style="text-align:center;">88.1</td>
+      <td style="text-align:center;">36.6</td>
+      <td style="text-align:center;">7.0</td>
+      <td style="text-align:center;">7.7</td>
+      <td style="text-align:center;">13.6</td>
+      <td style="text-align:center;">0.05</td>
+      <td style="text-align:center;">7.2</td>
+      <td style="text-align:center;">20.3</td>
+      <td style="text-align:center;">10.8</td>
+      <td style="text-align:center;">4.4</td>
+      <td style="text-align:center;">21.0</td>
+      <td style="text-align:center;">28.6</td>
+    </tr>
+    <tr>
+      <td>Qwen3-4B-Thinking-2507</td>
+      <td style="text-align:center;"><strong>100.0</strong></td>
+      <td style="text-align:center;">34.8</td>
+      <td style="text-align:center;">17.2</td>
+      <td style="text-align:center;">19.7</td>
+      <td style="text-align:center;">17.2</td>
+      <td style="text-align:center;">0.01</td>
+      <td style="text-align:center;">2.1</td>
+      <td style="text-align:center;">24.1</td>
+      <td style="text-align:center;">8.9</td>
+      <td style="text-align:center;">5.6</td>
+      <td style="text-align:center;"><strong>0.0</strong></td>
+      <td style="text-align:center;">0.0</td>
     </tr>
     <tr>
       <td>Qwen3-30B-A3B-Instruct-2507</td>
       <td style="text-align:center;">82.1</td>
       <td style="text-align:center;">43.5</td>
-      <td style="text-align:center;"><strong>19.8</strong></td>
-      <td style="text-align:center;"><strong>21.2</strong></td>
+      <td style="text-align:center;">19.8</td>
+      <td style="text-align:center;">21.2</td>
       <td style="text-align:center;">33.2</td>
       <td style="text-align:center;">1.02</td>
       <td style="text-align:center;">26.3</td>
@@ -810,6 +1140,21 @@ Evaluation results on RAVine, with a maximum context length of 128k and the inde
       <td style="text-align:center;">7.1</td>
       <td style="text-align:center;">80.0</td>
       <td style="text-align:center;">8.0</td>
+    </tr>
+    <tr>
+      <td>Qwen3-30B-A3B-Thinking-2507</td>
+      <td style="text-align:center;"><strong>100.0</strong></td>
+      <td style="text-align:center;"><strong>47.5<strong></td>
+      <td style="text-align:center;"><strong>22.5</strong></td>
+      <td style="text-align:center;"><strong>27.7</strong></td>
+      <td style="text-align:center;">27.4</td>
+      <td style="text-align:center;">0.03</td>
+      <td style="text-align:center;">3.2</td>
+      <td style="text-align:center;">23.0</td>
+      <td style="text-align:center;">8.9</td>
+      <td style="text-align:center;">5.9</td>
+      <td style="text-align:center;"><strong>0.0</strong></td>
+      <td style="text-align:center;"><strong>51.4</strong></td>
     </tr>
     <tr>
       <td>LLaMA-3.1-8B-Instruct</td>
@@ -859,6 +1204,36 @@ Evaluation results on RAVine, with a maximum context length of 256k and the inde
   </thead>
   <tbody>
     <tr>
+      <td>Qwen3-4B-Instruct-2507</td>
+      <td style="text-align:center;">91.7</td>
+      <td style="text-align:center;">37.8</td>
+      <td style="text-align:center;">5.5</td>
+      <td style="text-align:center;">6.7</td>
+      <td style="text-align:center;">35.1</td>
+      <td style="text-align:center;">0.04</td>
+      <td style="text-align:center;">6.7</td>
+      <td style="text-align:center;">20.3</td>
+      <td style="text-align:center;"><strong>13.9</strong></td>
+      <td style="text-align:center;">5.1</td>
+      <td style="text-align:center;">18.4</td>
+      <td style="text-align:center;">34.9</td>
+    </tr>
+    <tr>
+      <td>Qwen3-4B-Thinking-2507</td>
+      <td style="text-align:center;"><strong>100.0</strong></td>
+      <td style="text-align:center;">33.2</td>
+      <td style="text-align:center;">17.3</td>
+      <td style="text-align:center;">20.9</td>
+      <td style="text-align:center;">20.5</td>
+      <td style="text-align:center;">0.02</td>
+      <td style="text-align:center;">2.1</td>
+      <td style="text-align:center;">22.3</td>
+      <td style="text-align:center;">8.1</td>
+      <td style="text-align:center;">5.2</td>
+      <td style="text-align:center;">14.3</td>
+      <td style="text-align:center;">28.6</td>
+    </tr>
+    <tr>
       <td>Qwen3-30B-A3B-Instruct-2507</td>
       <td style="text-align:center;">81.0</td>
       <td style="text-align:center;">42.0</td>
@@ -872,6 +1247,21 @@ Evaluation results on RAVine, with a maximum context length of 256k and the inde
       <td style="text-align:center;">5.9</td>
       <td style="text-align:center;">74.6</td>
       <td style="text-align:center;">4.3</td>
+    </tr>
+    <tr>
+      <td>Qwen3-30B-A3B-Thinking-2507</td>
+      <td style="text-align:center;"><strong>100.0</strong></td>
+      <td style="text-align:center;"><strong>47.0</strong></td>
+      <td style="text-align:center;"><strong>23.2</strong></td>
+      <td style="text-align:center;"><strong>29.0</strong></td>
+      <td style="text-align:center;">27.5</td>
+      <td style="text-align:center;">0.03</td>
+      <td style="text-align:center;">3.0</td>
+      <td style="text-align:center;"><strong>24.4</strong></td>
+      <td style="text-align:center;">11.8</td>
+      <td style="text-align:center;"><strong>6.8</strong></td>
+      <td style="text-align:center;"><strong>1.6</strong></td>
+      <td style="text-align:center;"><strong>45.9</strong></td>
     </tr>
   </tbody>
 </table>
